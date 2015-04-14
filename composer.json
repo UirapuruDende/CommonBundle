@@ -1,0 +1,40 @@
+{
+    "name": "dende/common-bundle",
+    "authors": [
+        {
+            "name": "Grzegorz 'Uirapuru' Kaszuba",
+            "email": "uirapuruadg@gmail.com"
+        }
+    ],
+    "require": {
+	    "php": ">=5.4",
+	    "raven/raven": "0.8.*@dev",
+	    "phing/phing": "~2.9"
+    },
+    "require-dev": {
+	    "phpunit/phpunit" : "*",
+	    "mayflower/php-codebrowser": "~1.1",
+        "squizlabs/php_codesniffer": "2.0.*@dev",
+        "sebastian/phpcpd" : "*",
+        "evert/phpdoc-md" : "*",
+        "phploc/phploc" : "*",
+        "phpmd/phpmd" : "*",
+        "pdepend/pdepend" : "*",
+        "fabpot/php-cs-fixer": "2.0.*@dev",
+        "behat/behat": "~3.0",
+        "behat/mink-extension": "~2.0",
+        "behat/symfony2-extension": "2.0.*@dev",
+        "behat/mink-zombie-driver": "~1.2",
+        "behat/mink-selenium2-driver": "~1.2",
+        "vipsoft/doctrine-data-fixtures-extension": "3.0.*@dev",
+        "behat/common-formatters": "~1.2",
+        "webignition/json-pretty-print": "dev-master",
+        "hasbridge/json-schema-validator": "dev-master",
+        "liip/functional-test-bundle": "~1.2",
+        "behat/mink-browserkit-driver": "~1.2",
+        "mockery/mockery": "0.9.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
