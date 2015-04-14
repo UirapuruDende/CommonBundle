@@ -6,6 +6,9 @@
             "email": "uirapuruadg@gmail.com"
         }
     ],
+    "description": "Common stuff for various projects",
+    "keywords": ["symfony2", "bundle", "public"],
+    "license": "MIT",
     "require": {
 	    "php": ">=5.4",
 	    "raven/raven": "0.8.*@dev",
@@ -36,5 +39,9 @@
     },
     "config": {
         "bin-dir": "bin"
-    }
+    },
+    "autoload": {
+        "psr-0": { "Dende\\CommonBundle": "" }
+    },
+    "target-dir": "Dende/CommonBundle"
 }
