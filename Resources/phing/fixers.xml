@@ -1,0 +1,13 @@
+<project name="portfolio.fixers" default="">
+    <target name="phpcsfixer" description="php code fixer">
+        <exec command="bin/php-cs-fixer fix ./ --config=sf23" checkreturn="true" passthru="true" />
+    </target>
+
+    <target name="phpcsfixer-dry-run" description="php code fixer">
+        <exec command="bin/php-cs-fixer fix ./ --dry-run --config=sf23" checkreturn="true" passthru="true" />
+    </target>
+
+    <target name="phpcbf" description="php code beautifier and fixer">
+        <exec command="bin/phpcbf -p --encoding=utf8 --standard=app/phpcs.xml --extensions=php src/" checkreturn="true" passthru="true" />
+    </target>
+</project>
