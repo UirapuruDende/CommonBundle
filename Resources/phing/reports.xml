@@ -1,0 +1,31 @@
+<project name="dende.tests" default="prepare">
+    <target name="reset-db-test">
+        <phingcall target="reset-db">
+            <property name="env" value="test" />
+        </phingcall>
+    </target>
+
+    <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
+        <exec command="bin/phpcb --log build/logs --source src --output build/code-browser" checkreturn="true" passthru="true" />
+    </target>
+
+    <target name="phpcpd" description="Find duplicate code using PHPCPD">
+        <exec command="bin/phpcpd --log-pmd build/logs/pmd-cpd.xml src" checkreturn="false" passthru="true" />
+    </target>
+
+    <target name="phpmd" description="php mess detector">
+        <exec command="bin/phpmd src/ xml app/phpmd.xml --reportfile build/logs/pmd.xml" checkreturn="false" passthru="true" />
+    </target>
+
+    <target name="pdepend" description="Calculate software metrics using PHP_Depend">
+        <exec command="bin/pdepend --jdepend-xml=build/logs/jdepend.xml --overview-pyramid=build/pdepend/overview-pyramid.svg --jdepend-chart=build/pdepend/dependencies.svg src/" checkreturn="true" passthru="true" />
+    </target>
+
+    <target name="phploc-ci" description="Measure project size using PHPLOC and log result in CSV and XML format. Intended for usage within a continuous integration environment.">
+        <exec command="bin/phploc --count-tests --log-csv build/logs/phploc.csv --log-xml build/logs/phploc.xml src" />
+    </target>
+
+    <target name="phpdoc" description="Runs phpdocumentator">
+        <exec command="bin/phpdoc --config=app/phpdoc.xml" />
+    </target>
+</project>

@@ -22,6 +22,7 @@
         "evert/phpdoc-md": "dev-master",
         "phploc/phploc": "2.1.*@dev",
         "phpmd/phpmd": "dev-master",
+        "phpdocumentor/phpdocumentor": "2.*",
         "pdepend/pdepend": "2.0.*",
         "fabpot/php-cs-fixer": "2.0.*@dev",
         "behat/behat": "~3.0",

@@ -1,4 +1,4 @@
-<project name="portfolio.properties" default="prepare">
+<project name="dende.properties" default="prepare">
     <property name="php_bin" value="php" />
     <property name="bin_phpunit" value="bin/phpunit" />
     <property name="capifony_bin" value="cap" />
