@@ -1,8 +1,5 @@
 <project name="dende.database" default="reset-db">
     <target name="reset-db">
-
-        <!--User have to always set club property unless it's test environment-->
-
         <if>
             <not>
                 <isset property="env" />

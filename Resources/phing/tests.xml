@@ -85,7 +85,7 @@
     </target>
 
     <target name="test" depends="clear-build">
-        <phingcall target="test-phplint" />
+        <!--<phingcall target="test-phplint" />-->
         <phingcall target="test-twiglint" />
         <phingcall target="yamllint" />
         <phingcall target="test-security" />

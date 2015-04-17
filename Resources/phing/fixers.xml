@@ -1,10 +1,6 @@
 <project name="dende.fixers" default="">
 
-    <target name="phpcsfixer" description="php code fixer">
-        <exec command="bin/php-cs-fixer fix ./ --config=sf23" checkreturn="true" passthru="true" />
-    </target>
-
-    <target name="php-cs-fixer" description="php cs fixer">
+    <target name="phpcsfixer" description="php cs fixer">
         <exec command="bin/php-cs-fixer fix ./ --config=sf23 --verbose" checkreturn="true" passthru="true" />
     </target>
 
