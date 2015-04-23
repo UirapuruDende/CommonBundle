@@ -131,7 +131,7 @@
         <phingcall target="phantomjs-start" />
 
         <phingcall target="reset-db-test" />
-        <exec command='./bin/behat --tags="~@ignore"' checkreturn="true" passthru="true" />
+        <exec command='./bin/behat --tags="~@ignore" --format=junit --out=build/behat' checkreturn="true" passthru="true" />
 
         <phingcall target="phantomjs-stop" />
         <phingcall target="stop-php-server" />
